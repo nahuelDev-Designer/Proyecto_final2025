@@ -230,18 +230,6 @@ class Salas {
     return salaActual;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
   public void sala2() {
     JOptionPane.showMessageDialog(null, "Sala 2 - Biblioteca",
         "EscapeRoom",
@@ -285,73 +273,113 @@ class Salas {
             JOptionPane.INFORMATION_MESSAGE, Iconos.Boris);
         JOptionPane.showMessageDialog(null, "—. Soy el doctor Boris Mikhailov. No deberías estar aquí.",
             "Boris Mikhailov",
-            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris); 
-        JOptionPane.showMessageDialog(null, "Extiende una mano, no en amenaza, \n" +  "sino casi como si estuviera recibiendo a un paciente.",
+            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris);
+        JOptionPane.showMessageDialog(null,
+            "Extiende una mano, no en amenaza, \n" + "sino casi como si estuviera recibiendo a un paciente.",
             "Boris Mikhailov",
-            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris); //crear imagen de boris extendiendo la mano
-            
-       JOptionPane.showMessageDialog(null, "—Me intriga ",
-            "Boris Mikhailov",
-            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris_duda);
-         JOptionPane.showMessageDialog(null, " —agrega, observándote como si fueras un resultado experimental inesperado ",
-            "Boris Mikhailov",
-            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris_duda); 
-         JOptionPane.showMessageDialog(
-          null, "¿Cómo has llegado hasta aqui sin que nadie te detuviera?",
+            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris); // crear imagen de boris extendiendo la mano
+
+        JOptionPane.showMessageDialog(null, "—Me intriga ",
             "Boris Mikhailov",
             JOptionPane.INFORMATION_MESSAGE, Iconos.Boris_duda);
-         JOptionPane.showMessageDialog(null, "Su tono no es de alarma… es de curiosidad genuina.\n" + //
-                      " Y eso te incomoda más que si hubiera gritado.",
+        JOptionPane.showMessageDialog(null,
+            " —agrega, observándote como si fueras un resultado experimental inesperado ",
             "Boris Mikhailov",
             JOptionPane.INFORMATION_MESSAGE, Iconos.Boris_duda);
-         JOptionPane.showMessageDialog(null, "¿Quién eres? ¿Y qué es este lugar? ¿Qué me hicieron?", // implementar opcion para poder elegir lo que decir (si da el tiempo)
+        JOptionPane.showMessageDialog(
+            null, "¿Cómo has llegado hasta aqui sin que nadie te detuviera?",
+            "Boris Mikhailov",
+            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris_duda);
+        JOptionPane.showMessageDialog(null, "Su tono no es de alarma… es de curiosidad genuina.\n" + //
+            " Y eso te incomoda más que si hubiera gritado.",
+            "Boris Mikhailov",
+            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris_duda);
+        JOptionPane.showMessageDialog(null, "¿Quién eres? ¿Y qué es este lugar? ¿Qué me hicieron?", // implementar
+                                                                                                    // opcion para poder
+                                                                                                    // elegir lo que
+                                                                                                    // decir (si da el
+                                                                                                    // tiempo)
             "Personaje",
             JOptionPane.INFORMATION_MESSAGE, Iconos.Personaje);
-                 JOptionPane.showMessageDialog(null, "Boris titubea apenas. Como si por un segundo \n" + 
-                                      "se debatiera entre responder… \n" +
-                                                  "o proteger algo mucho más grande.",
+        JOptionPane.showMessageDialog(null, "Boris titubea apenas. Como si por un segundo \n" +
+            "se debatiera entre responder… \n" +
+            "o proteger algo mucho más grande.",
             "Boris Mikhailov",
             JOptionPane.INFORMATION_MESSAGE, Iconos.Boris_duda);
-                    JOptionPane.showMessageDialog(null, "—Este lugar es una cura —dice finalmente, \n pero sus ojos no acompañan sus palabras—. \n O al menos… eso es lo que ellos decidieron que debía ser. " ,
+        JOptionPane.showMessageDialog(null,
+            "—Este lugar es una cura —dice finalmente, \n pero sus ojos no acompañan sus palabras—. \n O al menos… eso es lo que ellos decidieron que debía ser. ",
             "Boris Mikhailov",
-            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris); 
-                    JOptionPane.showMessageDialog(null, "Se acerca un paso más, habla más bajo.",
+            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris);
+        JOptionPane.showMessageDialog(null, "Se acerca un paso más, habla más bajo.",
             "Boris Mikhailov",
-            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris); 
-                    JOptionPane.showMessageDialog(null, "—Si has llegado hasta mí, (nombre del personaje)",
+            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris);
+        JOptionPane.showMessageDialog(null, "—Si has llegado hasta mí, (nombre del personaje)",
             "Boris Mikhailov",
-            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris_duda); 
-                    JOptionPane.showMessageDialog(null, "—susurra—… eso significa que algo salió mal.",
+            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris_duda);
+        JOptionPane.showMessageDialog(null, "—susurra—… eso significa que algo salió mal.",
             "Boris Mikhailov",
-            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris); 
-         Object[] opciones = {"Tomar su mano", "Atacarlo con la jeringa", "CORRER"};
-int seleccion = JOptionPane.showOptionDialog(null, "Boris cambia repentinamente su expresion y su tono \n a una sonrisa extraña, se inclina y extiende mas su mano hacia ti \n" + //
-                             "— Toma mi mano —dice con un tono seguro—.\n  te ayudare a salir de aqui", "Boris", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, Iconos.Boris_Mano, opciones, opciones[0]);
-switch (seleccion) {
-  case 0: 
-      // Tomar su mano
-      break;
-      
-  case 1:
-      // Atacar con la jeringa
-      break;
-      
-  case 2:
-      // CORRER
-      break;
-}
+            JOptionPane.INFORMATION_MESSAGE, Iconos.Boris);
+        Object[] opciones = { "Tomar su mano", "Atacarlo con la jeringa", "CORRER" };
+        int seleccion = JOptionPane.showOptionDialog(null,
+            "Boris cambia repentinamente su expresion y su tono \n a una sonrisa extraña, se inclina y extiende mas su mano hacia ti \n"
+                + //
+                "— Toma mi mano —dice con un tono seguro—.\n  te ayudare a salir de aqui",
+            "EscapeRoom", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, Iconos.Boris_Mano, opciones,
+            opciones[0]);
+
+        switch (seleccion) {
+          case 0:
+            JOptionPane.showMessageDialog(null,
+                "Parece que te esta ayudando a levantarte pero con su otra mano saca \n" +
+                    "una jeringa de su bolsillo tracero y te la clava rapidamente",
+                "EscapeRoom",
+                JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,
+                "La expresion de Boris cambia a una sonrisa maligna y burlona, cierras los ojos y nunca vuelves a despertar.",
+                "Boris Mikhailov",
+                JOptionPane.INFORMATION_MESSAGE, Iconos.Boris);
+                System.exit(0);
+            break;
+
+          case 1:
+            JOptionPane.showMessageDialog(null,
+                "Mientras estas torpemente mueviendo tu mano intentando encontrar donde esta la jeringa, \n con una precision y rapidez que da miedo Boris te clavo la jeringa en la arteria del cuello.",
+                "Boris Mikhailov",
+                JOptionPane.INFORMATION_MESSAGE, Iconos.Boris);
+            JOptionPane.showMessageDialog(null, "Cierras los ojos y nunca vuelves a despertar.",
+                "EscapeRoom",
+                JOptionPane.INFORMATION_MESSAGE);
+                System.exit(0);
+            break;
+
+          case 2:
+            JOptionPane.showMessageDialog(null,
+                "te impulsas con las 2 manos y corres entre las estanterias de la sala a toda velocidad buscando con desesperacion una salida",
+                "EscapeRoom",
+                JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Boris entre risas te sigue caminando con unos pasos firmes y seguros.",
+                "Boris Mikhailov",
+                JOptionPane.INFORMATION_MESSAGE, Iconos.Boris);
+            JOptionPane.showMessageDialog(null, "Boris-No hay escapatoria para ti- dice con un tono oscuro.",
+                "Boris Mikhailov",
+                JOptionPane.INFORMATION_MESSAGE, Iconos.Boris);
+            JOptionPane.showMessageDialog(null,
+                "Por un milagro encuentras una puerta de madera que logras forzar con el bisturi",
+                "EscapeRoom",
+                JOptionPane.INFORMATION_MESSAGE);
+
+               sala3();
+            break;
+        }
         break;
-
-
-
 
       case 2:
         JOptionPane.showMessageDialog(null,
             "Te encuentras en una sala enorme —aproximadamente 30 × 30 metros—\n" +
                 "colmada de estanterías repletas de libros. En la esquina derecha se alinean cuatro oficinas; \n" +
-             "cada una tiene una mesa alta de madera, una silla, una lámpara de escritorio y \n" +
-                 "una computadora de aspecto potente. En una de esas oficinas hay un hombre inclinado \n" +
-            "sobre unos papeles, como si revisara documentos con atención. \n" +
+                "cada una tiene una mesa alta de madera, una silla, una lámpara de escritorio y \n" +
+                "una computadora de aspecto potente. En una de esas oficinas hay un hombre inclinado \n" +
+                "sobre unos papeles, como si revisara documentos con atención. \n" +
                 "",
 
             "EscapeRoom",
@@ -361,72 +389,74 @@ switch (seleccion) {
             "Con mucha cautela rompes la rejilla y, sin hacer apenas ruido, desciendes por el conducto.",
             "EscapeRoom",
             JOptionPane.INFORMATION_MESSAGE);
-                    JOptionPane.showMessageDialog(null,
+        JOptionPane.showMessageDialog(null,
             "Te deslizas hasta el suelo y te escondes detrás de una estantería cercana.",
             "EscapeRoom",
             JOptionPane.INFORMATION_MESSAGE);
-                    JOptionPane.showMessageDialog(null,
+        JOptionPane.showMessageDialog(null,
             "La luz tenue de la habitacion apenas alcanza las cubiertas:",
             "EscapeRoom",
             JOptionPane.INFORMATION_MESSAGE);
-                    JOptionPane.showMessageDialog(null,
+        JOptionPane.showMessageDialog(null,
             "la mayoría son textos de psicología —lo deducís por las portadas— y están escritos en ruso.",
             "EscapeRoom",
             JOptionPane.INFORMATION_MESSAGE); // agregar imagen de libros en ruso
-                    JOptionPane.showMessageDialog(null,
+        JOptionPane.showMessageDialog(null,
             "Contra la pared, al final de las estanterías,  \n" +
-                            "hay un mueble metálico con varios cajones que parecen contener archivos.  \n" + //
-                                                            "En lo alto del mueble hay un cartel que dice ДОКУМЕНТЫ: ПЛАН ВОЛЬЯ.",
+                "hay un mueble metálico con varios cajones que parecen contener archivos.  \n" + //
+                "En lo alto del mueble hay un cartel que dice ДОКУМЕНТЫ: ПЛАН ВОЛЬЯ.",
             "EscapeRoom",
             JOptionPane.INFORMATION_MESSAGE);
-                                JOptionPane.showMessageDialog(null,
+        JOptionPane.showMessageDialog(null,
             "Justo entonces escuchás pasos: el hombre que estaba en la oficina \n" + //
-                            "se dirige hacia el mueble. Tenés que decidir rápido.",
+                "se dirige hacia el mueble. Tenés que decidir rápido.",
             "EscapeRoom",
             JOptionPane.INFORMATION_MESSAGE);
-           String op5 = (String) JOptionPane.showInputDialog(
-        null,
-        "¿Qué hacés? \n 1. Esconderte y atacarlo por detrás cuando revise los archivos \n 2. Correr \n 3. Atacarlo frontalmente con el bisturí ",
-        "EscapeRoom",
-        JOptionPane.QUESTION_MESSAGE,
-        null,
-        null,
-        null);
-    switch (Integer.parseInt(op5)) {
-      case 1: 
-      JOptionPane.showMessageDialog(null,
-              "Te metés en un hueco entre las estanterías,  \n" +
-                  "aguardás hasta que abra los cajones y\n" +
-                  "entonces atacás por sorpresa.",
-              "EscapeRoom",
-              JOptionPane.INFORMATION_MESSAGE);
-    break;
-      case 2:
-     Random rand = new Random();
-     if(rand.nextInt(100) < 30) { //30% de evadir) {
-       JOptionPane.showMessageDialog(null,
-            "Lográs evadirlo y corrés hacia una puerta de madera al fondo del pasillo. ",
+        String op5 = (String) JOptionPane.showInputDialog(
+            null,
+            "¿Qué hacés? \n 1. Esconderte y atacarlo por detrás cuando revise los archivos \n 2. Correr \n 3. Atacarlo frontalmente con el bisturí ",
             "EscapeRoom",
-            JOptionPane.INFORMATION_MESSAGE);
-     } else {
-       JOptionPane.showMessageDialog(null,
-            "Intentás salir disparado por el pasillo. El hombre reacciona con reflejos sorprendentes: \n" + 
-            "te agarra del brazo con fuerza y, con voz fría, dice: «No deberías estar aquí». \n" +  // poner imagenes maybe
-            "Antes de que puedas zafar, te clava la jeringa en el brazo.\n" + 
-            "La sedación te invade. Caés dormido y no volvés a despertar. ",
-            "EscapeRoom",
-            JOptionPane.INFORMATION_MESSAGE);
-       JOptionPane.showMessageDialog(null,
-            "Te moriste",
-            "EscapeRoom",
-            JOptionPane.INFORMATION_MESSAGE);
-       System.exit(0);
-     }
-      break;
-      case 3:
- // implementar minijuego de combate por tiempo de reaccion
-   break;
-    }
+            JOptionPane.QUESTION_MESSAGE,
+            null,
+            null,
+            null);
+        switch (Integer.parseInt(op5)) {
+          case 1:
+            JOptionPane.showMessageDialog(null,
+                "Te metés en un hueco entre las estanterías,  \n" +
+                    "aguardás hasta que abra los cajones y\n" +
+                    "entonces atacás por sorpresa.",
+                "EscapeRoom",
+                JOptionPane.INFORMATION_MESSAGE);
+            break;
+          case 2:
+            Random rand = new Random();
+            if (rand.nextInt(100) < 30) { // 30% de evadir) {
+              JOptionPane.showMessageDialog(null,
+                  "Lográs evadirlo y corrés hacia una puerta de madera al fondo del pasillo. ",
+                  "EscapeRoom",
+                  JOptionPane.INFORMATION_MESSAGE);
+            } else {
+              JOptionPane.showMessageDialog(null,
+                  "Intentás salir disparado por el pasillo. El hombre reacciona con reflejos sorprendentes: \n" +
+                      "te agarra del brazo con fuerza y, con voz fría, dice: «No deberías estar aquí». \n" + // poner
+                                                                                                             // imagenes
+                                                                                                             // maybe
+                      "Antes de que puedas zafar, te clava la jeringa en el brazo.\n" +
+                      "La sedación te invade. Caés dormido y no volvés a despertar. ",
+                  "EscapeRoom",
+                  JOptionPane.INFORMATION_MESSAGE);
+              JOptionPane.showMessageDialog(null,
+                  "Te moriste",
+                  "EscapeRoom",
+                  JOptionPane.INFORMATION_MESSAGE);
+              System.exit(0);
+            }
+            break;
+          case 3:
+            // implementar minijuego de combate por tiempo de reaccion
+            break;
+        }
         break;
 
       default:
@@ -435,54 +465,19 @@ switch (seleccion) {
     }
   }
 
-
-
-
-
-
-
-
-
-
   public void sala3() {
-    // implementar comportamiento de la sala 3
+    JOptionPane.showMessageDialog(null, "Sala 3 - Laboratorio",
+        "EscapeRoom",
+        JOptionPane.INFORMATION_MESSAGE);
   }
-
-
-
-
-
-
-
-
-
-
-
 
   public void sala4() {
     // implementar comportamiento de la sala 4
   }
 
-
-
-
-
-
-
-
-
-
-
-
   public void sala5() {
     // sala adicional para evitar duplicados de nombre
   }
-
-
-
-
-
-
 
 }
 
