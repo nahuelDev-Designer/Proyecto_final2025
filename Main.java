@@ -2,6 +2,7 @@ import javax.swing.ImageIcon;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 import java.util.Random;
+import java.util.Timer;
 
 class Iconos {
   public static final ImageIcon Personaje = new ImageIcon(Iconos.class.getResource("/imagenes/pj.png"));
@@ -11,6 +12,13 @@ class Iconos {
   public static final ImageIcon Biblioteca = new ImageIcon(Iconos.class.getResource("/imagenes/Biblioteca.png"));
   public static final ImageIcon Boris_duda = new ImageIcon(Iconos.class.getResource("/imagenes/Boris_duda.png"));
   public static final ImageIcon Boris_Mano = new ImageIcon(Iconos.class.getResource("/imagenes/Boris_Mano.png"));
+    public static final ImageIcon Boris_herido = new ImageIcon(Iconos.class.getResource("/imagenes/Boris_herido.png"));
+      public static final ImageIcon Boris_death = new ImageIcon(Iconos.class.getResource("/imagenes/Boris_death.png"));
+        public static final ImageIcon Boris_atacado = new ImageIcon(Iconos.class.getResource("/imagenes/Boris_atacado.png"));
+          public static final ImageIcon Fondo = new ImageIcon(Iconos.class.getResource("/imagenes/fondo.png"));
+          public static final ImageIcon Boris_fight = new ImageIcon(Iconos.class.getResource("/imagenes/Boris_fight.png"));
+          public static final ImageIcon Boris_esquivando = new ImageIcon(Iconos.class.getResource("/imagenes/Boris_esquivando.png"));
+
 }
 
 class Salas {
@@ -230,7 +238,7 @@ class Salas {
     return salaActual;
   }
 
-  public void sala2() {
+  public int sala2(int puntaje) {
     JOptionPane.showMessageDialog(null, "Sala 2 - Biblioteca",
         "EscapeRoom",
         JOptionPane.INFORMATION_MESSAGE);
@@ -428,6 +436,42 @@ class Salas {
                     "entonces atacás por sorpresa.",
                 "EscapeRoom",
                 JOptionPane.INFORMATION_MESSAGE);
+  Object[] armas = { "Bisturí", "Jeringa" };
+  int eleccionArma = JOptionPane.showOptionDialog(
+      null,
+      "¿Con qué atacás?",
+      "EscapeRoom",
+      JOptionPane.DEFAULT_OPTION,
+      JOptionPane.QUESTION_MESSAGE,
+      Iconos.Boris_duda,
+      armas,
+      armas[0]);
+
+  if (eleccionArma == 0) {
+   puntaje = puntaje + 50;
+   JOptionPane.showMessageDialog(null, "+50 puntos", "Puntuacion",
+       JOptionPane.INFORMATION_MESSAGE);
+    JOptionPane.showMessageDialog(null, "Le clavas el bisturí en la nuca. El hombre \n cae sin emitir apenas un sonido.", "Ataque", JOptionPane.INFORMATION_MESSAGE);
+    sala21();
+  } else if (eleccionArma == 1) {
+    
+    if (inventario.tieneJeringa) {
+       puntaje = puntaje + 10;
+   JOptionPane.showMessageDialog(null, "+10 puntos", "Puntuacion",
+       JOptionPane.INFORMATION_MESSAGE);
+      JOptionPane.showMessageDialog(null, "Le aplicás la jeringa en la nuca y lo dormís", "Ataque con jeringa", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Perdes la jeringa del inventario", "Inventario", JOptionPane.INFORMATION_MESSAGE);
+       inventario.tieneJeringa = false;
+       sala21();
+       
+    } else {
+      JOptionPane.showMessageDialog(null, "No tenés jeringa en el inventario.", "Inventario", JOptionPane.WARNING_MESSAGE);
+     
+     
+    }
+  } else {
+     JOptionPane.showMessageDialog(null, "ERROR_OPCION_INVALIDA", "Ataque", JOptionPane.ERROR_MESSAGE);
+  }
             break;
           case 2:
             Random rand = new Random();
@@ -436,6 +480,15 @@ class Salas {
                   "Lográs evadirlo y corrés hacia una puerta de madera al fondo del pasillo. ",
                   "EscapeRoom",
                   JOptionPane.INFORMATION_MESSAGE);
+                              JOptionPane.showMessageDialog(null, "???-No hay escapatoria para ti- dice con un tono oscuro.",
+                "???",
+                JOptionPane.INFORMATION_MESSAGE, Iconos.Boris);
+            JOptionPane.showMessageDialog(null,
+                "Por un milagro encuentras una puerta de madera que logras forzar con el bisturi",
+                "EscapeRoom",
+                JOptionPane.INFORMATION_MESSAGE);
+
+               sala3();
             } else {
               JOptionPane.showMessageDialog(null,
                   "Intentás salir disparado por el pasillo. El hombre reacciona con reflejos sorprendentes: \n" +
@@ -454,7 +507,65 @@ class Salas {
             }
             break;
           case 3:
-            // implementar minijuego de combate por tiempo de reaccion
+ JOptionPane.showMessageDialog(
+    null,
+    "Prepárate para atacar por sorpresa...",
+    "Minijuego de reacción",
+    JOptionPane.INFORMATION_MESSAGE,
+    Iconos.Fondo 
+);
+
+long startTime = System.currentTimeMillis();
+JOptionPane.showMessageDialog(
+    null,
+    "¡ATACA AHORA! (haz click lo más rápido posible)",
+    "Minijuego de reacción",
+    JOptionPane.INFORMATION_MESSAGE,
+    Iconos.Boris_fight // Cambia el icono si quieres otra imagen
+);
+long reaction = System.currentTimeMillis() - startTime;
+
+if (reaction < 1000) { // Menos de 1 segundo
+    JOptionPane.showMessageDialog(
+        null,
+        "¡Ataque exitoso! Logras sorprenderlo.",
+        "Minijuego de reacción",
+        JOptionPane.INFORMATION_MESSAGE,
+        Iconos.Boris_atacado
+    );
+        JOptionPane.showMessageDialog(
+        null,
+        "El enemigo es abatido.",
+        "Minijuego de reacción",
+        JOptionPane.INFORMATION_MESSAGE,
+        Iconos.Boris_death
+    );
+    sala21();
+} else {
+    JOptionPane.showMessageDialog(
+        null,
+        "¡Fallaste! El enemigo reacciona a tiempo y te esquiva.",
+        "Minijuego de reacción",
+        JOptionPane.ERROR_MESSAGE,
+        Iconos.Boris_esquivando
+    );
+    JOptionPane.showMessageDialog(
+        null,
+        "El enemigo te contraataca clavandote una jeringa en el cuello.",
+        "Minijuego de reacción",
+        JOptionPane.INFORMATION_MESSAGE,
+        Iconos.Boris
+        
+    );
+              JOptionPane.showMessageDialog(null,
+              "te duermes y nunca mas vuelve a despertar",
+              "EscapeRoom",
+              JOptionPane.INFORMATION_MESSAGE);
+
+          JOptionPane.showMessageDialog(null, "Te moriste", "EscapeRoom",
+              JOptionPane.INFORMATION_MESSAGE);
+          System.exit(0);
+}
             break;
         }
         break;
@@ -463,8 +574,11 @@ class Salas {
         JOptionPane.showMessageDialog(null, "Opción no válida. Intenta de nuevo.");
         // volver a llamar a la sala2 para una nueva elección
     }
+    return puntaje;
   }
+  public void sala21() {
 
+  }
   public void sala3() {
     JOptionPane.showMessageDialog(null, "Sala 3 - Laboratorio",
         "EscapeRoom",
@@ -515,10 +629,10 @@ public class Main {
         case 1:
           salaActual = salas.sala1(puntaje, salaActual);
           // Update salaActual or gameFinished as needed
-          break;
         case 2:
-          salas.sala2();
+          puntaje = salas.sala2(puntaje);
           break;
+         
         case 3:
           salas.sala3();
           break;
